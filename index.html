@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện Tập Hóa Học 8 - Giữa Kỳ 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar Categories -->
+        <aside class="sidebar">
+            <header>
+                <h1>HÓA HỌC 8</h1>
+                <p>Giữa Học Kỳ 1</p>
+            </header>
+            <h2>Chủ đề bài tập</h2>
+            <div class="category-list" id="categoryMenu">
+                <button class="category-item active" onclick="selectCategory('all')">Tất cả các bài</button>
+                <button class="category-item" onclick="selectCategory('Tính số mol chất')">Tính số mol chất</button>
+                <button class="category-item" onclick="selectCategory('Chuyển đổi khối lượng, thể tích, lượng chất')">Chuyển đổi lượng chất</button>
+                <button class="category-item" onclick="selectCategory('Tỉ khối chất khí')">Tỉ khối chất khí</button>
+                <button class="category-item" onclick="selectCategory('Bài toán về độ tan')">Bài toán về độ tan</button>
+                <button class="category-item" onclick="selectCategory('Bài tập về nồng độ phần trăm')">Nồng độ phần trăm</button>
+                <button class="category-item" onclick="selectCategory('Bài tập về nồng độ mol')">Nồng độ mol</button>
+            </div>
+        </aside>
+
+        <!-- Main Content Box -->
+        <main class="main-content">
+            <!-- Dashboard Stats -->
+            <div class="dashboard">
+                <div class="stat-box">
+                    <span class="stat-label">Số câu đúng</span>
+                    <span class="stat-value" id="correctCount">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Tổng số câu đã làm</span>
+                    <span class="stat-value" id="totalCount">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">Tỉ lệ chính xác</span>
+                    <span class="stat-value ratio" id="accuracyRate">0%</span>
+                </div>
+            </div>
+
+            <!-- Quiz Card -->
+            <div class="quiz-card">
+                <div class="quiz-category-tag" id="questionCategory">Chủ đề</div>
+                <div class="question-text" id="questionText">Đang tải câu hỏi...</div>
+                
+                <div class="options-container" id="optionsContainer">
+                    <!-- Dynamic option buttons -->
+                </div>
+
+                <div class="controls">
+                    <button class="next-btn" id="nextBtn" onclick="generateQuestion()">Câu tiếp theo &rarr;</button>
+                </div>
+            </div>
+
+            <!-- History Log -->
+            <div class="history-section">
+                <h3>Nhật ký làm bài</h3>
+                <div class="history-list" id="historyList">
+                    <!-- Dynamic history items -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
